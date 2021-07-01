@@ -1,12 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentor Profile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Barry Yu's Portfolio</title>
+	<link rel="shortcut icon" href="assets/img.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Roboto&family=Signika&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0/css/all.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-  Mentor Profile
+
+<!-- Core Firebase JS SDK -->
+<script src="/__/firebase/7.8.2/firebase-app.js"></script>
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<!-- Navigation bar -->
+<nav class="navbar fixed-top navbar-expand-md navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand logo-setting" href="#">Barry Yu</a>
+      <button class="navbar-toggler collapsed navbar-light" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto text-right">
+          <li class="nav-item">
+            <a class="nav-link navbar-color" href="#about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-color" href="#experience">EXPERIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-color" href="#projects">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-color" href="#contact">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-color" target="_blank" href="#">RESUME <em class="far fa-arrow-alt-circle-down" aria-hidden="true"></em></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Welcome page -->
+<div class="welcome-page" id="index">
+
+  <!-- Content -->  
+	<div class="welcome-content text-center col-md-6 col-xs-8">
+			Hello, world! I'm
+			<br> 
+			<span class="welcome-name">Barry Yu,</span>
+			<br>
+			welcome to my portfolio!
+	</div>
+
+  <!-- Scroll indicator -->
+	<a href="#about">
+			<div class="scroll-indicator">
+  				<div class="mouse">
+  					<span></span>
+  				</div>
+  		</div>
+  </a>
+
+</div>
+
+<!-- About-->
+<div class="container-fluid" id="about">
+
+	<div class="row">
+		<div class="col-12">
+			<h2><u> About Me </u></h2>
+		</div>
+	</div>
+
+ 	<div class="row">
+    	<div class="col-lg-4 col-xs-12 col-sm-6">
+     		<img class="projects-image rounded-edges" src="assets/me.jpg" alt="My photo">
+    	</div>
+   		<div class="col-lg-8 col-xs-12 col-sm-6">
+      		<div class="intro-text">
+            Hi there! My name is Barry! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, error. Mollitia facilis labore quasi velit incidunt. Libero labore voluptatem ipsa eum fugiat illum alias numquam magni vitae, autem, officia obcaecati.
+            <br><br>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nobis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quidem aspernatur voluptatem quasi? Ducimus dicta iure dolor commodi reprehenderit aut?
+            <br><br>
+            <a target="_blank" href="#" class="btn text-button btn-style" role="button" aria-pressed="true">View my resume</a>
+          </div>
+		</div>
+  </div>
+</div>
+
+<!-- Work Experience -->
+<div class="container-fluid" id="experience">
+	<div class="row">
+		<div class="col-12">
+			<h2><u>Work Experience and Education</u></h2>
+		</div>
+	</div>
+
+ 	<div class="row">
+    	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+     		<div class="experience-item">
+          <div class="experience-left">
+            <a href="https://www.albany.edu/" target="_blank">
+              <img class="experience-logo" src="assets/alb-logo.jpeg" alt="SUNY logo">
+            </a>
+          </div>
+     			
+          <div class="experience-right">
+            <span class="extra-bold">
+              University at Albany, SUNY
+            </span>
+            <br>
+            Bachelor of science in Economic and minor in Bussiness Adminitration
+            <br>
+            2013 - 2017
+     			</div>
+     		</div>
+    	</div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="experience-item">
+          <div class="experience-left">
+            <a href="https://www.nyu.edu/" target="_blank">
+              <img class="experience-logo" src="assets/nyu-logo.jpeg" alt="NYU logo">
+            </a>
+          </div>
+          
+          <div class="experience-right">
+            <span class="extra-bold">
+              New York University
+            </span>
+            <br>
+            Master's degree, Information System/Marketing
+            <br>
+            2017 - 2019
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="experience-item">
+          <div class="experience-left">
+            <a href="https://bschool.pepperdine.edu/" target="_blank">
+              <img class="experience-logo" src="assets/pgb-logo.png" alt="Business School logo">
+            </a>
+          </div>
+          
+          <div class="experience-right">
+            <span class="extra-bold">
+              Pepperdine Graziadio Business School
+            </span>
+            <br>
+            Master of Business Administration - MBA
+            <br>
+            2020 - 2022
+          </div>
+        </div>
+      </div>
+
+    	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+     		<div class="experience-item">
+          <div class="experience-left">
+            <a href="https://corporate.jd.com/" target="_blank">
+     			    <img class="experience-logo" src="assets/jd-logo.png" alt="JD logo">
+            </a>
+          </div>
+     			<div class="experience-right">
+            <span class="extra-bold">
+     				 JD.COM
+            </span>
+     				<br>
+     				Marketing Specialist Intern
+            <br>
+            May 2018 - Sep 2018
+     			</div>
+     		</div>
+    	</div>
+
+    	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+     		<div class="experience-item">
+          <div class="experience-left">
+            <a href="https://register.gotowebinar.com/register/1128572134079135248" target="_blank">
+     			    <img class="experience-logo" src="assets/stat-logo.jpeg" alt="Statista logo">
+            </a>
+          </div>
+     			<div class="experience-right">
+     				<span class="extra-bold"> Statista </span>
+     				<br>
+     				Marketing Research Analyst Intern
+            <br>
+            Jan 2019 - May 2019
+     			</div>
+     		</div>
+    	</div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="experience-item">
+         <div class="experience-left">
+           <a href="https://www.publicisgroupe.com/fr/splash" target="_blank">
+              <img class="experience-logo" src="assets/pg-logo.jpeg" alt="Publicis Groupe logo">
+           </a>
+         </div>
+          <div class="experience-right">
+            <span class="extra-bold"> Publicis Groupe </span>
+            <br>
+            Data Analyst, Data Automation | Dysney Account
+           <br>
+           Oct 2019 - Sep 2020
+          </div>
+        </div>
+     </div>
+
+     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="experience-item">
+       <div class="experience-left">
+         <a href="https://www.rencenter.org/" target="_blank">
+            <img class="experience-logo" src="assets/rec-logo.png" alt="Renaissance Entrepreneurship Center logo">
+         </a>
+       </div>
+        <div class="experience-right">
+          <span class="extra-bold"> Renaissance Entrepreneurship Center </span>
+          <br>
+          Product Manager
+         <br>
+         Jan 2021 - Present
+        </div>
+      </div>
+   </div>
+    </div>
+</div>
+
+<!--- Projects -->
+<div class="container-fluid" id="projects">
+	<div class="row">
+		<div class="col-12">
+			<h2><u>Recent Projects</u></h2>
+		</div>
+	</div>
+	<div class="row">
+
+    <div class="col-lg-4 col-xs-12 col-sm-6">
+      <div class="projects-container">
+        <img class="projects-image" src="assets/sample-img.jpg" alt="Photo Desctiprion" style="width:100%"> 
+        <div class="projects-text-container">
+            <div class="projects-text">
+              <h5><b>Name</b></h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus necessitatibus quidem itaque reiciendis adipisci nobis nisi voluptatum est expedita numquam.
+              </p>
+              <a target="_blank" href="#" class="btn text-button btn-style" role="button" aria-pressed="true">Link</a>
+            </div>
+          </div>
+          <div class="projects-caption">
+            <span class="extra-bold">Name</span> - Description
+          </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-xs-12 col-sm-6">
+      <div class="projects-container">
+        <img class="projects-image" src="assets/sample-img.jpg" alt="Photo Desctiprion" style="width:100%"> 
+        <div class="projects-text-container">
+            <div class="projects-text">
+              <h5><b>Name</b></h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus necessitatibus quidem itaque reiciendis adipisci nobis nisi voluptatum est expedita numquam.
+              </p>
+              <a target="_blank" href="#" class="btn text-button btn-style" role="button" aria-pressed="true">Link</a>
+            </div>
+          </div>
+          <div class="projects-caption">
+            <span class="extra-bold">Name</span> - Description
+          </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-xs-12 col-sm-6">
+      <div class="projects-container">
+        <img class="projects-image" src="assets/sample-img.jpg" alt="Photo Desctiprion" style="width:100%"> 
+        <div class="projects-text-container">
+            <div class="projects-text">
+              <h5><b>Name</b></h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus necessitatibus quidem itaque reiciendis adipisci nobis nisi voluptatum est expedita numquam.
+              </p>
+              <a target="_blank" href="#" class="btn text-button btn-style" role="button" aria-pressed="true">Link</a>
+            </div>
+          </div>
+          <div class="projects-caption">
+            <span class="extra-bold">Name</span> - Description
+          </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-xs-12 col-sm-6">
+      <div class="projects-container">
+        <img class="projects-image" src="assets/sample-img.jpg" alt="Photo Desctiprion" style="width:100%"> 
+        <div class="projects-text-container">
+            <div class="projects-text">
+              <h5><b>Name</b></h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus necessitatibus quidem itaque reiciendis adipisci nobis nisi voluptatum est expedita numquam.
+              </p>
+              <a target="_blank" href="#" class="btn text-button btn-style" role="button" aria-pressed="true">Link</a>
+            </div>
+          </div>
+          <div class="projects-caption">
+            <span class="extra-bold">Name</span> - Description
+          </div>
+        </div>
+    </div>
+    
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="container-fluid" id="contact">
+	<div class="row text-center">
+		<div class="col-12">
+      <br>
+      <br>
+		  <h3>Let's get in touch!</h3>
+		</div>
+
+    <div class="col-12 contact-icons">
+  		<a href="https://www.linkedin.com/in/songwei-yu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  		<a href="#" target="_blank"><i class="fab fa-github"></i></a>
+  		<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+  		<a href="#"><i class="far fa-envelope"></i></a>
+    </div>
+  </div> 
+</div>
+
+<footer class="text-center">
+  <div class="col-12">
+    <p>Made with <i class="fas fa-heart"></i> 2021 </p>
+  </div>
+</footer>
+
 </body>
 </html>

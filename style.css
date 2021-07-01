@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+:root {
+  --theme-color: #522bdd;
+  --sub-color: #afcbf5;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+  scroll-behavior: smooth;
+  background-color: #fafafa;
+}
+
+body {
+  padding: 2rem;
+  background-image: url("assets/bg.jpg");
+  background-repeat: repeat;
+}
+
+.logo-setting {
+  font-family: 'Signika', sans-serif;
+  font-size: 2em;
+  color: black;
+}
+
+u {
+  text-decoration: none;
+  background: transparent linear-gradient(90deg, var(--sub-color), var(--sub-color)) no-repeat 0 93%;
+  background-size: 100% 12px;
+}​
+
+a {
+  color: white;
+}
+
+/* Landing Page */
+.welcome-page{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  margin: auto;
+  display: table;
+  top: 0;
+}
+
+.welcome-content{
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-name {
+  font-family: 'Caveat', cursive;
+  font-size: 5em;
+  margin-top: -10px;
+  margin-bottom: -10px;
+
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Social Media Icons */
+.contact-icons a {
+  font-size: 2em;
+  padding: 0.75rem;
+  color: #171515;
+}
+
+.contact-icons a:hover {
+  color: var(--theme-color);
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: #DC143C;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+  .welcome-name {
+  font-family: 'Caveat', cursive;
+  font-size: 3.5em;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+  .welcome-content{
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  .projects-text {
+  font-size: 12px;
+}
+
+.experience-left {
+    width: 35%;
+}
+
+.experience-right {
+    width: 65%;
+}
+  
+}
+@media (max-width: 576px) {
+  body {
+  background-color: #ffffff;
+  padding: 0.75rem;
+  }
+
+  .welcome-name {
+  font-family: 'Caveat', cursive;
+  font-size: 3em;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  }
+
+  .welcome-content{
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .projects-text {
+  font-size: 12px;
+}
+
+.experience-left {
+    width: 35%;
+}
+
+.experience-right {
+    width: 65%;
+}
+  
+}
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/* Projects */
+
+.projects-container {
+  position: relative;
+}
+
+.projects-image {
+  opacity: 1;
+  backface-visibility: hidden;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px #d6d6d6;
+}
+
+.projects-text-container {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+}
+
+.projects-container:hover .projects-image {
+  opacity: 0.1;
+
+}
+
+.projects-container:hover .projects-text-container {
+  opacity: 1;
+}
+
+.projects-text {
+  font-size: 14px;
+}
+
+.projects-caption {
+  margin-top: 5px;
+}
+
+.text-button {
+  font-size: 14px;
+}
+
+.intro-text {
+  padding-right: 5px;
+  padding-left: 5px; 
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.skills-text {
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+}
+
+/* Navigation Bar */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: black;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+} 
+
+.navbar-color {
+  color: black;
+}
+
+.navbar-color:hover {
+  color: var(--theme-color);
+}
+.navbar-custom {
+  padding: 5px 20px 5px 20px;
+  background-image: url("assets/bg.jpg");
+  background-repeat: repeat;
+  box-shadow: 0px 1px 4px #d6d6d6;
+}
+
+/* Scroll Indicator */
+.scroll-indicator { 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+/* Mouse Styling */
+.mouse {
+  display: block;
+  width: 2em;
+  height: 3.5em;
+  border-radius: 2em;
+  border: 0.2em solid black;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  margin-left: -13px;
+  color: red;
+}
+
+.mouse span {
+  display: block;
+  margin: 6px auto;
+  width: 2px;
+  height: 2px;
+  border-radius: 4px;
+  background: black;
+  border: 2px solid transparent;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+      margin-top: 2px;
+      opacity: 0;
+  }
+  30% {
+      opacity: 1;
+  }
+  100% {
+      margin-top: 20px;
+      opacity: 0;
+  }
+}@-moz-keyframes scroll {
+  0% {
+      margin-top: 2px;
+      opacity: 0;
+  }
+  30% {
+      opacity: 1;
+  }
+  100% {
+      margin-top: 20px;
+      opacity: 0;
+  }
+}@keyframes scroll {
+  0% {
+      margin-top: 2px;
+      opacity: 0;
+  }
+  30% {
+      opacity: 1;
+  }
+  100% {
+      margin-top: 20px;
+      opacity: 0;
+  }
+}
+
+/* Experience section */
+.experience-item {
+  background-color: white;
+  box-shadow: 1px 1px 3px #d6d6d6;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+}
+
+.experience-logo {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.extra-bold{
+  color: black;
+  font-weight: bold;
+  -webkit-text-stroke: 0.2px black;
+}
+
+.link {
+  color: black;
+  background: transparent linear-gradient(90deg, var(--theme-color), var(--theme-color)) no-repeat 0 93%;
+  background-size: 100% 3px;
+
+}
+
+.link:hover {
+  color: white;
+  background-color: var(--theme-color);
+  cursor: pointer;
+}
+
+.btn-style {
+  border-radius: 30px;
+  color: #5A7684;
+  border: 2px solid var(--theme-color);
+}
+
+.btn-style:hover {
+  background-color: var(--theme-color);
+  color: white;
+  cursor: pointer;
+}
+
+/* Photography Gallery */
+.photo-gallery img {
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.photo-gallery {
+  margin-top: -2em;
+}
