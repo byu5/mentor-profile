@@ -4,8 +4,8 @@ Profile web-page for business mentor
 
 /// Separate work Experience and Education
 /// add photo - DONE
-/// white or light background
-/// change colors a bit
+/// white or light background - DONE
+/// change colors a bit - DONE
 /// change fonts
 /// add About me description - DONE
 /// downloadable resumes
