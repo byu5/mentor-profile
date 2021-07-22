@@ -78,6 +78,11 @@ a {
   margin-bottom: 1rem;
 }
 
+.welcome-text {
+  font-weight: 150;
+  padding-top: 50px;
+}
+
 
 /* Social Media Icons */
 .contact-icons a {
